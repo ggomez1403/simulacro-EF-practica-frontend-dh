@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --clr-black: #222;
+    --clr-gray: #F3F3F3;
+    --clr-white: #FFF;
+    --clr-red: #D01418;
+    --clr-dark-gray: #C4C4C4;
+    --clr-green: #619D00;
+    --clr-twitter: #14AED0;
+    --clr-facebook: #1476D0;
+    --clr-instagram: #CE0CFF;
+    --transition: all 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.red {
+    color: var(--clr-red);
+}
+
+header {
+    background: var(--clr-black);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+}
+
+.nav-header {
+    color: var(--clr-white);
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.nav-links a {
+    color: var(--clr-white);
+}
+
+.nav-links li {
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    background-color: var(--clr-black);
+}
+
+.nav-links li:hover {
+    background-color: #535353;
+    font-weight: 700;
+}
+
+.shopping-cart {
+    display: none;
+}
+
+.show-links {
+    height: 207px;
+    transition: var(--transition);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo .red {
+    font-weight: 400;
+}
+
+.fa-bars {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.discount {
+    background: url('../img/background.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    color: var(--clr-white);
+    text-align: center;
+    gap: 4rem;
+}
+
+.discount h1 {
+    font-size: 2.8rem;
+}
+
+.discount a {
+    padding: 0.8rem 2.8rem;
+    border-radius: 0.31rem;
+    background: var(--clr-red);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.discount a:hover {
+    background-color: #7c0e10;
+}
+
+main {
+    background-color: var(--clr-gray);
+}
+
+.games h2 {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.single-game {
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.game {
+    border-bottom: 1px solid var(--clr-dark-gray);
+    padding: 2.5rem 3rem;
+}
+
+.game img {
+    width: 180px;
+}
+
+.game-info {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+.green {
+    color: var(--clr-green);
+    font-size: 0.8rem;
+}
+
+.stars-products {
+    margin: 5rem 0;
+}
+
+.stars-products h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.single-star {
+    position: relative;
+}
+
+.single-star img {
+    border-radius: 0.31rem;
+    width: 75vw;
+}
+
+.single-star p {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 40%;
+    right: 7%;
+    color: var(--clr-white);
+}
+
+.footer-container {
+    background-color: var(--clr-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--clr-white);
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.social {
+    font-size: 1.3rem;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.fa-twitter {
+    color: var(--clr-twitter);
+}
+
+.fa-facebook {
+    color: var(--clr-facebook);
+}
+
+.fa-instagram {
+    color: var(--clr-instagram);
+}
+
+.rights {
+    background-color: var(--clr-dark-gray);
+    color: var(--clr-black);
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+@media screen and (min-width: 700px) {
+    .games-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem 2.5rem;
+    }
+
+    .social-icons {
+        margin-bottom: 0;
+    }
+
+    .socials-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    .shopping-cart {
+        display: block;
+    }
+
+    .fa-cart-shopping {
+        color: var(--clr-red);
+    }
+
+    .nav-links {
+        display: flex;
+        height: auto;
+        align-items: center;
+    }
+
+    .nav-links li:hover {
+        background-color: #535353;
+        font-weight: 400;
+    }
+
+    .stars-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 7rem;
+    }
+
+    .single-star img {
+        width: 400px;
+    }
+}
